@@ -6,6 +6,7 @@ import {
 	FaNodeJs,
 	FaGithub,
 } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
 	return (
@@ -33,15 +34,15 @@ export default function Home() {
 					Obsessed with performance, pixel perfection, and React sauce.
 				</motion.p>
 
-				<motion.a
-					href="/projects"
+				<motion.Link
+					to="/projects"
 					className="inline-flex items-center gap-2 text-sm sm:text-base bg-cyan-600 hover:bg-cyan-500 transition-all px-6 py-3 rounded-full font-semibold shadow-lg"
 					initial={{ opacity: 0, scale: 0.9 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ delay: 0.6, duration: 0.4 }}
 				>
 					See My Work <FaArrowRight className="ml-1" />
-				</motion.a>
+				</motion.Link>
 				<div className="mt-8 flex justify-center gap-6 text-3xl text-cyan-400">
 					<FaReact title="React" />
 					<FaJsSquare title="JavaScript" />
