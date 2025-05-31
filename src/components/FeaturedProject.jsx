@@ -1,8 +1,14 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const FeaturedProject = ({ title, description, github, live, image, tech }) => {
 	return (
-		<section className="bg-[#0f0f0f] text-white p-6 rounded-xl border border-neutral-700 shadow-xl">
+		<motion.section
+			initial={{ opacity: 0, y: -50 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.8 }}
+			className="bg-[#0f0f0f] text-white p-6 rounded-xl border border-neutral-700 shadow-xl"
+		>
 			<h2 className="text-2xl font-bold mb-4">Featured Project</h2>
 			<div className="flex flex-col md:flex-row gap-6">
 				{image && (
@@ -47,7 +53,7 @@ const FeaturedProject = ({ title, description, github, live, image, tech }) => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 

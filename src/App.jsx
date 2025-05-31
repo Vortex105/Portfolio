@@ -9,12 +9,19 @@ const App = () => {
 	return (
 		<div className="bg-[#0f172a] text-white min-h-screen font-sans">
 			<Navbar />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/projects" element={<Projects />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/contact" element={<Contact />} />
-			</Routes>
+
+			<div className="py-10">
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/projects" element={<Projects />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/contact" element={<Contact />} />
+				</Routes>
+			</div>
+
+			<footer className="w-full text-gray-600 text-md bg-black/75 backdrop-blur py-5 text-center fixed bottom-0">
+				Copyright © {new Date().getFullYear()} Seseshe
+			</footer>
 		</div>
 	);
 };

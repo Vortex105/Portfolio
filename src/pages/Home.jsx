@@ -12,7 +12,7 @@ export default function Home() {
 	return (
 		<section
 			id="home"
-			className="min-h-screen flex items-center justify-center bg-gradient-to-b from-zinc-950 to-zinc-900 px-6 text-white"
+			className="min-h-screen flex items-center justify-center bg-gradient-to-b from-zinc-950 to-zinc-900 px-6 text-white overflow-y-hidden"
 		>
 			<div className="max-w-4xl text-center space-y-6">
 				<motion.h1
@@ -34,15 +34,18 @@ export default function Home() {
 					Obsessed with performance, pixel perfection, and React sauce.
 				</motion.p>
 
-				<motion.Link
-					to="/projects"
-					className="inline-flex items-center gap-2 text-sm sm:text-base bg-cyan-600 hover:bg-cyan-500 transition-all px-6 py-3 rounded-full font-semibold shadow-lg"
+				<motion.div
 					initial={{ opacity: 0, scale: 0.9 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ delay: 0.6, duration: 0.4 }}
 				>
-					See My Work <FaArrowRight className="ml-1" />
-				</motion.Link>
+					<Link
+						to="/projects"
+						className="inline-flex items-center gap-2 text-sm sm:text-base bg-cyan-600 hover:bg-cyan-500 transition-all px-6 py-3 rounded-full font-semibold shadow-lg"
+					>
+						See My Work <FaArrowRight className="ml-1" />
+					</Link>
+				</motion.div>
 				<div className="mt-8 flex justify-center gap-6 text-3xl text-cyan-400">
 					<FaReact title="React" />
 					<FaJsSquare title="JavaScript" />
