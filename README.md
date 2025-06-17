@@ -12,7 +12,7 @@ It showcases who I am, what I’ve built, and how to contact me — all in a sle
 - 🧩 **Modular Sections** – About, Projects, Tech Stack, Resume, Contact.
 - ✨ **Smooth Animations** – Powered by [Framer Motion](https://www.framer.com/motion/).
 - 📄 **Downloadable Resume** – PDF version of my resume available in About section.
-- 📬 **Contact Form** – Hooked up with [EmailJS](https://www.emailjs.com/) (coming soon).
+- 📬 **Contact Form** – Hooked up with [EmailJS](https://www.emailjs.com/).
 - 🛠️ **Tooltips** – Interactive hover tooltips for icons & actions.
 
 ---
@@ -40,6 +40,7 @@ This portfolio was crafted using a modern frontend development stack:
 | ⚡ **Vite**          | Lightning-fast dev server and bundler     |
 | 🎞️ **Framer Motion** | Smooth animations and transitions         |
 | 💬 **React Tooltip** | Hover tooltips for enhanced interactivity |
+| 📧 **EmailJS**       | Contact API for sending emails            |
 
 ---
 
@@ -60,6 +61,7 @@ Special thanks to the dev tools and open-source packages that made this portfoli
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [React Tooltip](https://www.npmjs.com/package/react-tooltip)
+- [EmailJS](https://www.emailjs.com)
 
 ---
 
