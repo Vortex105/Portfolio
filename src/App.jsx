@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, Slide } from 'react-toastify';
 
 const App = () => {
 	return (
@@ -18,6 +20,14 @@ const App = () => {
 					<Route path="/contact" element={<Contact />} />
 				</Routes>
 			</div>
+			<ToastContainer
+				theme="dark"
+				pauseOnHover
+				closeOnClick
+				position="top-center"
+				transition={Slide}
+				autoClose={3000}
+			/>
 
 			<footer className="w-full text-gray-600 text-md bg-black/75 backdrop-blur py-5 text-center fixed bottom-0">
 				Copyright © {new Date().getFullYear()} Seseshe

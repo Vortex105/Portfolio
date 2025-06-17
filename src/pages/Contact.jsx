@@ -1,32 +1,36 @@
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { FaXTwitter, FaGithub } from 'react-icons/fa6';
-// Uncomment below if using emailjs
-// import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+import { format } from 'date-fns';
 
 export default function Contact() {
 	const {
 		register,
 		handleSubmit,
-		formState: { errors, isSubmitting, isSubmitSuccessful },
+		formState: { errors, isSubmitting },
 		reset,
 	} = useForm();
 
 	const onSubmit = async (data) => {
+		const params = {
+			name: data.name.trim(),
+			time: format(new Date(), 'do MMMM, yyyy. HH:mm:ss'),
+			email: data.email.trim(),
+			message: data.message.trim(),
+		};
 		try {
-			// Uncomment below if using EmailJS
-			/*
-      await emailjs.send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        data,
-        "YOUR_PUBLIC_KEY"
-      );
-      */
-			alert("Message sent! I'll get back to you ASAP.");
+			await emailjs.send(
+				'service_7opo7f6',
+				'template_0chpqos',
+				params,
+				'FFwfpPtFqrEvEWUNC'
+			);
+			toast.success("Message sent successfully! I'll get back to you ASAP.");
 			reset();
 		} catch (error) {
-			alert('Oops! Something went wrong.');
+			toast.error('Oops! Something went wrong. Please try again');
 		}
 	};
 
@@ -99,7 +103,7 @@ export default function Contact() {
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					className="bg-cyan-600 hover:bg-cyan-500 transition-colors rounded-lg py-3 font-semibold shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
+					className="bg-cyan-600 hover:bg-cyan-500 transition-colors rounded-lg py-3 font-semibold shadow-md disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
 				>
 					{isSubmitting ? 'Sending...' : 'Send Message'}
 				</button>
