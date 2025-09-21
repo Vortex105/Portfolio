@@ -117,7 +117,7 @@ export default function Contact() {
 				transition={{ duration: 0.8, delay: 0.4 }}
 			>
 				<a
-					href="https://x.com/Vortex1075"
+					href="https://x.com/Vortex1356"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="Twitter"

@@ -8,7 +8,7 @@ import {
 	FaGithub,
 } from 'react-icons/fa';
 import { SiTailwindcss, SiVite } from 'react-icons/si';
-import avatar from '../assets/avatar.png'; // replace with your image path
+import avatar from '../assets/avatar.png'; 
 
 const stackIcons = [
 	{ icon: <FaReact />, name: 'React' },
@@ -37,22 +37,35 @@ const About = () => {
 			id="about"
 		>
 			{/* HEADER */}
-			<div className="flex flex-col md:flex-row items-center gap-8">
-				<img
-					src={avatar}
-					alt="My Avatar"
-					className="w-40 h-40 rounded-full object-cover border-4 border-neutral-700 aspect-square"
-				/>
+ <div className="relative flex flex-col md:flex-row items-center md:items-stretch gap-10 p-8 rounded-2xl overflow-hidden">
+      {/* Fade edges */}
+      <div className="pointer-events-none absolute inset-0" />
 
-				<div>
-					<h1 className="text-4xl font-bold mb-3">About Me</h1>
-					<p className="text-gray-300 leading-relaxed">
-						I'm a frontend developer with a focus on building slick,
-						user-friendly web apps using React, Tailwind, and motion libraries.
-						I started this journey in 2024 and haven’t looked back since.
-					</p>
-				</div>
-			</div>
+      {/* Image Section */}
+      <img
+        src={avatar}
+        alt="My Avatar"
+        className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-xl"
+      />
+
+      {/* Text Section */}
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="flex flex-col justify-center text-left space-y-6 max-w-xl"
+      >
+        <h1 className="text-5xl font-extrabold text-white tracking-tight drop-shadow-lg">
+          About Me
+        </h1>
+        <p className="text-xl text-gray-300 leading-relaxed font-medium text-justify md:text-left">
+          I’m a frontend developer obsessed with creating interfaces that just
+          *click*. Using React, Tailwind, and motion, I bring clean design +
+          smooth interactions to life. Started in 2024, and the grind hasn’t
+          stopped since 🚀
+        </p>
+      </motion.div>
+    </div>
 
 			{/* TECH STACK */}
 			<div className="mt-12">
