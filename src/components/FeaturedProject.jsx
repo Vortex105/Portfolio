@@ -7,20 +7,21 @@ const FeaturedProject = ({ title, description, github, live, image, tech }) => {
 			initial={{ opacity: 0, y: -50 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.8 }}
-			className="bg-[#0f0f0f] text-white p-6 rounded-xl border border-neutral-700 shadow-xl"
+			
 		>
-			<h2 className="text-2xl font-bold mb-4">Featured Project</h2>
-			<div className="flex flex-col md:flex-row gap-6">
+			<div className="flex flex-col h-[500px] border border-neutral-700">
 				{image && (
-					<img
-						src={image}
-						alt={title}
-						className="w-full md:w-1/2 rounded-lg object-cover border"
-					/>
+					<div className="h-[250px]">
+						<img
+							src={image}
+							alt={title}
+							className="w-full h-full object-cover"
+						/>
+					</div>
 				)}
-				<div className="flex-1">
+				<div className="flex-1 p-4 flex flex-col">
 					<h3 className="text-xl font-semibold">{title}</h3>
-					<p className="text-gray-300 mt-2">{description}</p>
+					<p className="text-gray-300 mt-2 flex-grow overflow-y-auto">{description}</p>
 
 					<div className="flex flex-wrap gap-2 mt-4">
 						{tech.map((item, index) => (
@@ -42,7 +43,8 @@ const FeaturedProject = ({ title, description, github, live, image, tech }) => {
 						>
 							Live Demo
 						</a>
-						<a
+						{github && (
+							<a
 							href={github}
 							target="_blank"
 							rel="noopener noreferrer"
@@ -50,6 +52,7 @@ const FeaturedProject = ({ title, description, github, live, image, tech }) => {
 						>
 							GitHub Repo
 						</a>
+						)}
 					</div>
 				</div>
 			</div>

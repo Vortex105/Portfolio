@@ -20,12 +20,6 @@ const stackIcons = [
 	{ icon: <FaGithub />, name: 'GitHub' },
 ];
 
-const timeline = [
-	{ year: '2024', text: 'Started learning web development' },
-	{ year: '2024', text: 'Built a quiz app and deployed It' },
-	{ year: '2024', text: 'Started learning tailwindcss' },
-	{ year: '2025', text: 'Started with ReactJS' },
-];
 
 const About = () => {
 	return (
@@ -83,14 +77,19 @@ const About = () => {
 				</div>
 			</div>
 
-			{/* TIMELINE */}
+			{/* SKILLS GROWTH */}
 			<div className="mt-12">
-				<h2 className="text-2xl font-semibold mb-4">My Journey</h2>
-				<div className="border-l-2 border-neutral-700 pl-4 space-y-4">
-					{timeline.map((item, i) => (
-						<div key={i}>
-							<h3 className="text-lg font-medium text-blue-400">{item.year}</h3>
-							<p className="text-gray-300">{item.text}</p>
+				<h2 className="text-2xl font-semibold mb-4">Skills Growth</h2>
+				<div className="grid gap-4">
+					{[
+						{ skill: "Frontend Fundamentals", details: "Mastered HTML, CSS, and JavaScript fundamentals through hands-on projects" },
+						{ skill: "Interactive Development", details: "Built and deployed a fully functional quiz application" },
+						{ skill: "Modern CSS", details: "Adopted Tailwind CSS for efficient, responsive styling" },
+						{ skill: "React Development", details: "Currently building dynamic web applications with React and modern tools" }
+					].map((item, i) => (
+						<div key={i} className="bg-neutral-800/50 p-4 rounded-lg">
+							<h3 className="text-lg font-medium text-blue-400">{item.skill}</h3>
+							<p className="text-gray-300">{item.details}</p>
 						</div>
 					))}
 				</div>

@@ -4,21 +4,31 @@ import ProjectCard from '../components/ProjectCard';
 import { motion } from 'framer-motion';
 
 const Projects = () => {
-	const featured = {
+	const featured = [{
 		title: 'Quiz App',
 		description: 'Multiple-choice quiz app with scoring and results summary.',
 		github: 'https://github.com/Vortex105/Quiz',
 		live: 'https://quiz2-4wwj.onrender.com',
 		image: './src/assets/projects/quiz.png', // optional
 		tech: ['API', 'Javascript'],
-	};
+	},
+		{
+		title: 'Tempusort',
+		description: 'A time management app to organize tasks and track productivity, also includes a study feature with Pomodoro technique integration.',
+		live: 'https://tempusort.onrender.com',
+		image: './src/assets/projects/Tempusort.png', // optional
+		tech: ['React', 'TailwindCSS', 'Vite', 'AI'],
+		},
+		
+	];
 
 	const others = [
 		{
-			title: 'Weather App',
+			title: 'Horizon Tours',
 			description:
-				'A React-based weather app with real-time data and animated UI.',
-			github: 'https://github.com/Vortex105/AtmosLive',
+				'A static website for a travel agency built with HTML, CSS, and JavaScript.',
+			live: 'https://horizontours.onrender.com',
+			github: 'https://github.com/Vortex105/Horizon-Chasers-Tours-website.git',
 		},
 		{
 			title: 'To-Do List',
@@ -30,13 +40,24 @@ const Projects = () => {
 			title: 'Stopwatch',
 			description:
 				'A minimal stopwatch with start, pause, and reset functions.',
+			live: 'https://react-stopwatch-6pur.onrender.com',
 			github: 'https://github.com/Vortex105/Stopwatch',
 		},
 	];
 
 	return (
 		<main className="max-w-6xl mx-auto px-4 py-10">
-			<FeaturedProject {...featured} />
+			<section className="bg-[#0f0f0f] text-white p-6 rounded-xl border border-neutral-700 shadow-xl ">
+				
+				<h2 className="text-2xl font-bold mb-4">Featured Projects</h2>
+				<div className='grid gap-8 md:grid-cols-2'>
+					{featured.map((proj, i) => (
+						<FeaturedProject key={i} {...proj} />
+					))}
+				</div>
+				
+			</section>
+			
 
 			<motion.section
 				initial={{ y: 50, opacity: 0 }}
