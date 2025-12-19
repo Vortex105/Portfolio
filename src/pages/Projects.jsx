@@ -31,10 +31,11 @@ const Projects = () => {
 			github: 'https://github.com/Vortex105/Horizon-Chasers-Tours-website.git',
 		},
 		{
-			title: 'To-Do List',
+			title: 'Energem',
 			description:
-				'Basic to-do list app with CRUD functionality using localStorage.',
-			github: 'https://github.com/Vortex105/To-do-list',
+				'A mockup landing page for an energy-saving company using modern web design principles.',
+			live: 'https://energem.onrender.com',
+			github: 'https://github.com/Vortex105/Energem.git',
 		},
 		{
 			title: 'Stopwatch',
