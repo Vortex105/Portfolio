@@ -8,7 +8,7 @@ import {
 	FaGithub,
 } from 'react-icons/fa';
 import { SiTailwindcss, SiVite } from 'react-icons/si';
-import avatar from '../assets/avatar.png'; 
+import avatar from '../assets/avatar2.png'; 
 
 const stackIcons = [
 	{ icon: <FaReact />, name: 'React' },

@@ -2,6 +2,8 @@ import React from 'react';
 import FeaturedProject from '../components/FeaturedProject';
 import ProjectCard from '../components/ProjectCard';
 import { motion } from 'framer-motion';
+import QuizPng from '../assets/projects/quiz.png'
+import TempusortPng from '../assets/projects/Tempusort.png'
 
 const Projects = () => {
 	const featured = [{
@@ -9,14 +11,14 @@ const Projects = () => {
 		description: 'Multiple-choice quiz app with scoring and results summary.',
 		github: 'https://github.com/Vortex105/Quiz',
 		live: 'https://quiz2-4wwj.onrender.com',
-		image: './src/assets/projects/quiz.png', // optional
+		image: QuizPng, 
 		tech: ['API', 'Javascript'],
 	},
 		{
 		title: 'Tempusort',
 		description: 'A time management app to organize tasks and track productivity, also includes a study feature with Pomodoro technique integration.',
 		live: 'https://tempusort.onrender.com',
-		image: './src/assets/projects/Tempusort.png', // optional
+		image: TempusortPng, 
 		tech: ['React', 'TailwindCSS', 'Vite', 'AI'],
 		},
 		
