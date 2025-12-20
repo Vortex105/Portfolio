@@ -16,8 +16,8 @@ const stackIcons = [
 	{ icon: <FaHtml5 />, name: 'HTML5' },
 	{ icon: <FaCss3Alt />, name: 'CSS3' },
 	{ icon: <SiTailwindcss />, name: 'Tailwind' },
-	{ icon: <SiVite />, name: 'Vite' },
-	{ icon: <FaGithub />, name: 'GitHub' },
+	// { icon: <SiVite />, name: 'Vite' },
+	// { icon: <FaGithub />, name: 'GitHub' },
 ];
 
 
