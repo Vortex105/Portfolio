@@ -4,16 +4,10 @@ import ProjectCard from '../components/ProjectCard';
 import { motion } from 'framer-motion';
 import QuizPng from '../assets/projects/quiz.png'
 import TempusortPng from '../assets/projects/Tempusort.png'
+import DevOdysseyPng from '../assets/projects/dev-odyssey.png' 
 
 const Projects = () => {
-	const featured = [{
-		title: 'Quiz App',
-		description: 'Multiple-choice quiz app with scoring and results summary.',
-		github: 'https://github.com/Vortex105/Quiz',
-		live: 'https://quiz2-4wwj.onrender.com',
-		image: QuizPng, 
-		tech: ['API', 'Javascript'],
-	},
+	const featured = [
 		{
 		title: 'Tempusort',
 		description: 'A time management app to organize tasks and track productivity, also includes a study feature with Pomodoro technique integration.',
@@ -21,6 +15,14 @@ const Projects = () => {
 		image: TempusortPng, 
 		tech: ['React', 'TailwindCSS', 'Vite', 'AI'],
 		},
+		{
+			title: 'Dev Odyssey',
+			description: 'A web application built for developers to track their projects and showcase their projects.',
+			live: 'https://devodyssey.onrender.com', 
+			github: 'https://github.com/Vortex105/Dev-Odyssey', 
+			image: DevOdysseyPng,
+			tech: ['React', 'TailwindCSS', 'MERN'],
+		}
 		
 	];
 
@@ -38,13 +40,6 @@ const Projects = () => {
 				'A mockup landing page for an energy-saving company using modern web design principles.',
 			live: 'https://energem.onrender.com',
 			github: 'https://github.com/Vortex105/Energem.git',
-		},
-		{
-			title: 'Stopwatch',
-			description:
-				'A minimal stopwatch with start, pause, and reset functions.',
-			live: 'https://react-stopwatch-6pur.onrender.com',
-			github: 'https://github.com/Vortex105/Stopwatch',
 		},
 	];
 
