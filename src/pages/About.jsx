@@ -104,7 +104,7 @@ const About = () => {
 					and build things that solve real problems.
 				</p>
 				<a
-					href="/src/assets/resume-v2.pdf"
+					href="/resume-v2.pdf"
 					download
 					className="inline-block bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md font-medium transition"
 				>
