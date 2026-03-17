@@ -6,8 +6,9 @@ import {
 	FaCss3Alt,
 	FaJsSquare,
 	FaGithub,
+	FaPython,
 } from 'react-icons/fa';
-import { SiTailwindcss, SiVite } from 'react-icons/si';
+import { SiTailwindcss, SiVite, SiExpress, } from 'react-icons/si';
 import avatar from '../assets/avatar2.png'; 
 
 const stackIcons = [
@@ -16,6 +17,8 @@ const stackIcons = [
 	{ icon: <FaHtml5 />, name: 'HTML5' },
 	{ icon: <FaCss3Alt />, name: 'CSS3' },
 	{ icon: <SiTailwindcss />, name: 'Tailwind' },
+	{ icon: <FaPython />, name: 'Python' },
+	{ icon: <SiExpress />, name: 'Express' },
 	// { icon: <SiVite />, name: 'Vite' },
 	// { icon: <FaGithub />, name: 'GitHub' },
 ];
