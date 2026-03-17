@@ -2,9 +2,9 @@ import React from 'react';
 import FeaturedProject from '../components/FeaturedProject';
 import ProjectCard from '../components/ProjectCard';
 import { motion } from 'framer-motion';
-import QuizPng from '../assets/projects/quiz.png'
 import TempusortPng from '../assets/projects/Tempusort.png'
 import DevOdysseyPng from '../assets/projects/dev-odyssey.png' 
+import ResumeAnalysisPng from '../assets/projects/ResumeAnalysis.png'
 
 const Projects = () => {
 	const featured = [
@@ -22,7 +22,15 @@ const Projects = () => {
 			github: 'https://github.com/Vortex105/Dev-Odyssey', 
 			image: DevOdysseyPng,
 			tech: ['React', 'TailwindCSS', 'MERN'],
-		}
+		},
+		{
+			title: 'ResumeMetric',
+			description: 'A web application that analyzes resumes and provides feedback on how to improve them.',
+			live: 'https://resumemetric.onrender.com',
+			github: 'https://github.com/Vortex105/ResumeMetric',
+			image: ResumeAnalysisPng,
+			tech: ['React', 'TailwindCSS', 'Python', 'Express', 'NodeJS'],
+		},
 		
 	];
 
