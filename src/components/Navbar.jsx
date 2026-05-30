@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -7,31 +6,42 @@ const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const navLinks = [
-		{ name: 'Home', path: '/' },
-		{ name: 'About', path: '/about' },
-		{ name: 'Projects', path: '/projects' },
-		{ name: 'Contact', path: '/contact' },
+		{ name: 'Home', id: 'hero' },
+		{ name: 'About', id: 'about' },
+		{ name: 'Projects', id: 'projects' },
+		{ name: 'Contact', id: 'contact' },
 	];
 
 	const toggleMenu = () => setIsOpen(!isOpen);
 
+	const scrollToSection = (id) => {
+		const element = document.getElementById(id);
+		if (element) {
+			element.scrollIntoView({ behavior: 'smooth' });
+			setIsOpen(false);
+		}
+	};
+
 	return (
-		<header className="w-full fixed top-0 z-50 bg-black/80 backdrop-blur text-white shadow-md mb-4">
+		<header className="w-full fixed top-0 z-50 bg-black/80 backdrop-blur text-white shadow-md">
 			<div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
-				<Link to="/" className="text-2xl font-bold  text-teal-400">
+				<button
+					onClick={() => scrollToSection('hero')}
+					className="text-2xl font-bold text-cyan-400 hover:text-cyan-300 transition cursor-pointer"
+				>
 					SESESHE
-				</Link>
+				</button>
 
 				{/* Desktop Links */}
 				<nav className="hidden md:flex space-x-8 text-sm font-medium">
 					{navLinks.map((link) => (
-						<Link
+						<button
 							key={link.name}
-							to={link.path}
-							className="text-lg hover:text-teal-300 transition duration-200"
+							onClick={() => scrollToSection(link.id)}
+							className="text-lg hover:text-cyan-300 transition duration-200"
 						>
 							{link.name}
-						</Link>
+						</button>
 					))}
 				</nav>
 
@@ -60,13 +70,12 @@ const Navbar = () => {
 						<ul className="flex flex-col space-y-3 text-center">
 							{navLinks.map((link) => (
 								<li key={link.name}>
-									<Link
-										to={link.path}
-										onClick={() => setIsOpen(false)}
-										className="block py-2 text-white hover:text-teal-300 "
+									<button
+										onClick={() => scrollToSection(link.id)}
+										className="block w-full py-2 text-white hover:text-cyan-300"
 									>
 										{link.name}
-									</Link>
+									</button>
 								</li>
 							))}
 						</ul>
