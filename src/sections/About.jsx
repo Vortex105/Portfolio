@@ -40,9 +40,9 @@ export default function About() {
 	return (
 		<section
 			id="about"
-			className="py-24 px-6 bg-gradient-to-b from-slate-800 to-slate-900"
+			className="py-24 px-6 relative"
 		>
-			<div className="max-w-6xl mx-auto">
+			<div className="max-w-6xl mx-auto relative z-10">
 				{/* Section Title */}
 				<motion.div
 					initial={{ opacity: 0, y: -30 }}
@@ -52,9 +52,9 @@ export default function About() {
 					className="text-center mb-16"
 				>
 					<h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-						About <span className="text-cyan-400">Me</span>
+						About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Me</span>
 					</h2>
-					<div className="h-1 w-24 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full" />
+					<div className="h-1 w-24 bg-gradient-to-r from-blue-400 to-cyan-300 mx-auto rounded-full" />
 				</motion.div>
 
 				{/* Bio Section */}
@@ -66,7 +66,7 @@ export default function About() {
 						whileInView={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.6 }}
 						viewport={{ once: true }}
-						className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl shadow-2xl shadow-cyan-500/20 mx-auto"
+						className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl shadow-2xl shadow-blue-500/30 mx-auto border border-white/10"
 					/>
 
 					<motion.div
@@ -76,10 +76,10 @@ export default function About() {
 						viewport={{ once: true }}
 						className="space-y-6"
 					>
-						<p className="text-xl text-slate-300 leading-relaxed">
-							I'm a frontend developer obsessed with creating interfaces that just <span className="text-cyan-400 font-semibold">*click*</span>. Using React, Tailwind, and motion, I bring clean design + smooth interactions to life.
+						<p className="text-xl text-white/80 leading-relaxed">
+							I'm a frontend developer obsessed with creating interfaces that just <span className="text-blue-400 font-semibold">*click*</span>. Using React, Tailwind, and motion, I bring clean design + smooth interactions to life.
 						</p>
-						<p className="text-lg text-slate-400 leading-relaxed">
+						<p className="text-lg text-white/70 leading-relaxed">
 							Started my coding journey in 2024, and the grind hasn't stopped since 🚀 I'm passionate about turning complex ideas into elegant, user-friendly solutions.
 						</p>
 					</motion.div>
@@ -91,7 +91,7 @@ export default function About() {
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6 }}
 					viewport={{ once: true }}
-					className="mb-16"
+					className="mb-16 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
 				>
 					<h3 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">
 						Tech Stack
@@ -100,12 +100,12 @@ export default function About() {
 						{stackIcons.map((tech, i) => (
 							<motion.div
 								key={i}
-								className="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-slate-700/50 transition-all cursor-default"
+								className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-white/10 transition-all cursor-default"
 								whileHover={{ scale: 1.1, rotate: 5 }}
 								transition={{ type: 'spring', stiffness: 300 }}
 							>
-								<span className="text-4xl text-cyan-400">{tech.icon}</span>
-								<span className="text-xs text-slate-300 text-center">{tech.name}</span>
+								<span className="text-4xl text-blue-400/80 hover:text-blue-300 transition">{tech.icon}</span>
+								<span className="text-xs text-white/70 text-center">{tech.name}</span>
 							</motion.div>
 						))}
 					</div>
@@ -143,13 +143,13 @@ export default function About() {
 							<motion.div
 								key={i}
 								variants={itemVariants}
-								className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-6 rounded-xl border border-slate-600/50 hover:border-cyan-400/30 transition-all"
-								whileHover={{ y: -5 }}
+								className="bg-white/5 backdrop-blur-xl border border-blue-400/20 hover:border-blue-400/50 p-6 rounded-xl transition-all"
+								whileHover={{ y: -5, borderColor: 'rgba(96, 165, 250, 0.3)' }}
 							>
-								<h4 className="text-lg font-semibold text-cyan-400 mb-2">
+								<h4 className="text-lg font-semibold text-blue-400 mb-2">
 									{item.skill}
 								</h4>
-								<p className="text-slate-300 text-sm leading-relaxed">
+								<p className="text-white/70 text-sm leading-relaxed">
 									{item.details}
 								</p>
 							</motion.div>

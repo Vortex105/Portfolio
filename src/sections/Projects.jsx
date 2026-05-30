@@ -48,8 +48,8 @@ export default function Projects() {
 	];
 
 	return (
-		<section id="projects" className="py-24 px-6 bg-slate-900">
-			<div className="max-w-6xl mx-auto">
+		<section id="projects" className="py-24 px-6 relative">
+			<div className="max-w-6xl mx-auto relative z-10">
 				{/* Section Title */}
 				<motion.div
 					initial={{ opacity: 0, y: -30 }}
@@ -59,9 +59,9 @@ export default function Projects() {
 					className="text-center mb-16"
 				>
 					<h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-						My <span className="text-cyan-400">Projects</span>
+						My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Projects</span>
 					</h2>
-					<div className="h-1 w-24 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full" />
+					<div className="h-1 w-24 bg-gradient-to-r from-blue-400 to-cyan-300 mx-auto rounded-full" />
 				</motion.div>
 
 				{/* Featured Projects */}

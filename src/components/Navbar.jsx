@@ -23,11 +23,11 @@ const Navbar = () => {
 	};
 
 	return (
-		<header className="w-full fixed top-0 z-50 bg-black/80 backdrop-blur text-white shadow-md">
-			<div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+		<header className="w-full fixed top-0 z-50 bg-white/10 backdrop-blur-xl border-b border-white/10 text-white shadow-lg">
+			<div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-4">
 				<button
 					onClick={() => scrollToSection('hero')}
-					className="text-2xl font-bold text-cyan-400 hover:text-cyan-300 transition cursor-pointer"
+					className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 hover:from-blue-300 hover:to-cyan-200 transition cursor-pointer"
 				>
 					SESESHE
 				</button>
@@ -38,9 +38,10 @@ const Navbar = () => {
 						<button
 							key={link.name}
 							onClick={() => scrollToSection(link.id)}
-							className="text-lg hover:text-cyan-300 transition duration-200"
+							className="relative text-white/80 hover:text-white transition-colors duration-200 group"
 						>
 							{link.name}
+							<span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-300 group-hover:w-full transition-all duration-300"></span>
 						</button>
 					))}
 				</nav>
@@ -48,7 +49,7 @@ const Navbar = () => {
 				{/* Mobile Menu Toggle */}
 				<div className="md:hidden">
 					<button
-						className="cursor-pointer"
+						className="cursor-pointer text-white/80 hover:text-white transition"
 						onClick={toggleMenu}
 						aria-label="Toggle Menu"
 					>
@@ -65,14 +66,14 @@ const Navbar = () => {
 						animate={{ opacity: 1, y: 0 }}
 						exit={{ opacity: 0, y: -10 }}
 						transition={{ duration: 0.25 }}
-						className="md:hidden bg-black/90 px-4 py-2"
+						className="md:hidden bg-white/5 backdrop-blur-xl border-t border-white/10 px-4 py-2"
 					>
 						<ul className="flex flex-col space-y-3 text-center">
 							{navLinks.map((link) => (
 								<li key={link.name}>
 									<button
 										onClick={() => scrollToSection(link.id)}
-										className="block w-full py-2 text-white hover:text-cyan-300"
+										className="block w-full py-2 text-white/80 hover:text-white transition"
 									>
 										{link.name}
 									</button>
